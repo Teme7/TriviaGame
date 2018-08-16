@@ -3,6 +3,12 @@ var timer;
 
 var qn = $("#quiz");
 
+var questions = [{
+    question: "What was the first full length CGI movie?",
+    answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
+    correctAnswer: "Toy Story"
+  }];
+
 var game = {
     counter: 120,
     right: 0,
@@ -25,13 +31,13 @@ var game = {
         $("#start").remove();
 
         for(var q = 0; q < questions.length; q++){
-            panel.append("<h2>" + questions[i].question + "</h2>");
+            qn.append("<h2>" + questions[q].question + "</h2>");
             for(var a = 0; a < questions[q].answers.length; a++){
-                panel.append("<input type='radio' name='question-" + q + "' value='" + questions[q].answers[a] + "''>" + questions[q].answers[a]);
+                qn.append("<input type='radio' name='question-" + q + "' value='" + questions[q].answers[a] + "''>" + questions[q].answers[a]);
             }
         }
 
-        panel.append("<button id='done'>I'm So Done!</button>");
+        qn.append("<button id='done'>I'm So Done!</button>");
     },
 
     done: function(){
@@ -54,10 +60,10 @@ var game = {
 
         $("#sub-wrapper h2").remove();
 
-        panel.html("<h2>Finito!!");
-        panel.append("<h3>You answered: " this.right + " correctly.</h3>")
-        panel.append("<h3>You missed: " this.wrong + " questions.</h3>")
-        panel.append("<h3>You skipped: " + (questions.length - (this.right + this.wrong)) + " questions.</h3>");
+        qn.html("<h2>Finito!!");
+        qn.append("<h3>You answered: " + this.right + " correctly.</h3>")
+        qn.append("<h3>You missed: " + this.wrong + " questions.</h3>")
+        qn.append("<h3>You skipped: " + (questions.length - (this.right + this.wrong)) + " questions.</h3>");
     }
 
 };
