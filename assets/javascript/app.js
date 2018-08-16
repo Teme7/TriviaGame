@@ -1,7 +1,7 @@
 //global variables
 var timer;
 
-var qn = $("#questions");
+var qn = $("#quiz");
 
 var game = {
     counter: 120,
@@ -35,7 +35,37 @@ var game = {
     },
 
     done: function(){
-        
+
+        $.each($("input[name='question-0']:checked"), function(){
+            if($(this).val() === questions[0].right){
+                game.right++;
+            } else{
+                game.wrong++;
+            }
+        });
+
+        this.result();
+                
+    },
+
+    result: function(){
+
+        clearInterval(timer);
+
+        $("#sub-wrapper h2").remove();
+
+        panel.html("<h2>Finito!!");
+        panel.append("<h3>You answered: " this.right + " correctly.</h3>")
+        panel.append("<h3>You missed: " this.wrong + " questions.</h3>")
+        panel.append("<h3>You skipped: " + (questions.length - (this.right + this.wrong)) + " questions.</h3>");
     }
 
-}
+};
+
+$(document).on('click', "#start", function(){
+    game.start();
+});
+
+$(document).on('click', "#done", function(){
+    game.done();
+});
