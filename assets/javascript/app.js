@@ -7,6 +7,13 @@ var questions = [{
     question: "What was the first full length CGI movie?",
     answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
     correctAnswer: "Toy Story"
+    },
+
+    {
+        question: "Which NBA team won the most titles in the 90s?",
+        answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
+        correctAnswer: "Chicago Bulls",
+        image: "assets/images/jordan.jpg"
   }];
 
 var game = {
