@@ -1,4 +1,9 @@
 //global variables
+$("#start").on('click', function(){
+    console.log("OUCH!")
+    alert("Stop hitting me!!")
+});
+
 var timer;
 
 var qn = $("#quiz");
@@ -14,6 +19,7 @@ var questions = [{
         answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
         correctAnswer: "Chicago Bulls",
         image: "assets/images/jordan.jpg"
+        
   }];
 
 var game = {
