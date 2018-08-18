@@ -1,26 +1,33 @@
 //global variables
+// $("#start").on('click', function(){
+//     console.log("OUCH!")
+//     alert("Stop hitting me!!")
+// });
+
 $("#start").on('click', function(){
-    console.log("OUCH!")
-    alert("Stop hitting me!!")
-});
+    $("#quizBlock").remove();
+})
 
-var timer;
+// $(document).on('click', "#done", function(){
+//     game.done();
+// });
 
-var qn = $("#quiz");
+// var timer;
+
+// var qn = $("#quizBlock");
 
 var questions = [{
     question: "What was the first full length CGI movie?",
-    answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-    correctAnswer: "Toy Story"
-    },
+    choices: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
+    solution: "Toy Story"
+},
 
-    {
-        question: "Which NBA team won the most titles in the 90s?",
-        answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-        correctAnswer: "Chicago Bulls",
-        image: "assets/images/jordan.jpg"
-        
-  }];
+{
+    question: "Which NBA team won the most titles in the 90s?",
+    choices: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
+    solution: "Chicago Bulls",
+    
+}];
 
 var game = {
     counter: 120,
@@ -39,14 +46,14 @@ var game = {
     start: function(){
         timer = setInterval(game.countdown, 1000);
 
-        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'>120</span> Seconds</h2>");
+        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'>10</span> Seconds</h2>");
 
         $("#start").remove();
 
         for(var q = 0; q < questions.length; q++){
             qn.append("<h2>" + questions[q].question + "</h2>");
-            for(var a = 0; a < questions[q].answers.length; a++){
-                qn.append("<input type='radio' name='question-" + q + "' value='" + questions[q].answers[a] + "''>" + questions[q].answers[a]);
+            for(var a = 0; a < questions[q].choices.length; a++){
+                qn.append("<input type='radio' name='question-" + q + "' value='" + questions[q].choices[a] + "''>" + questions[q].choices[a]);
             }
         }
 
@@ -81,10 +88,18 @@ var game = {
 
 };
 
-$(document).on('click', "#start", function(){
+$("#start").on('click', function(){
     game.start();
 });
 
-$(document).on('click', "#done", function(){
+// $(document).on('click', "#start", function(){
+//     game.start();
+// });
+
+$("#done").on('click', function(){
     game.done();
 });
+
+// $(document).on('click', "#done", function(){
+//     game.done();
+// });
