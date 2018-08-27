@@ -72,12 +72,12 @@ var questions = [{
 {
     question: "Which of the following animals sleep standing up?",
     choices: ["Gorillas", "Flamingos", "Camels", "Ravens"],
-    solution: ""
+    solution: "Flamingos"
 },
 {
     question: "What is the fastest water animal?",
     choices: ["Porpoise", "Sailfish", "Flying fish", "Tuna"],
-    solution: ""
+    solution: "Sailfish"
 },
 {
     question: "Between 1900 and 1920, _______ was an Olympic event.",
@@ -98,16 +98,6 @@ var questions = [{
     question: "Which large mammal's tail is so strong it can stand on it and lift its hind legs off the ground?",
     choices: ["Crocodile", "Chimpanzee", "Kangaroo", "Spider monkey"],
     solution: "Kangaroo"
-},
-{
-    question: "",
-    choices: ["", "", "", ""],
-    solution: ""
-},
-{
-    question: "",
-    choices: ["", "", "", ""],
-    solution: ""
 },
 {
     question: "",
