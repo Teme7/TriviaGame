@@ -25,16 +25,95 @@ $("#start").on('click', function(){
 // var qn = $("#quizBlock");
 
 var questions = [{
-    question: "What was the first full length CGI movie?",
-    choices: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-    solution: "Toy Story"
+    question: "Deiphnophobia is the fear of_________.",
+    choices: ["Police sirens", "Car door dents", "Dinner conversations", "Cellphone battery depletion"],
+    solution: "Dinner conversations"
 },
-
 {
-    question: "Which NBA team won the most titles in the 90s?",
-    choices: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-    solution: "Chicago Bulls",
-    
+    question: "The first item sold on eBay was a___________. A collector of this exact thing bought it for $14.83.",
+    choices: ["Concert ticket stub", "Broken laser pointer", "Used Toyota air filter", "Ink-stained sweater"],
+    solution: "Broken laser pointer"
+},
+{
+    question: "What is the collective name for a  group of lions?",
+    choices: ["A herd", "A streak", "A pride", "A cackle"],
+    solution: "A pride"
+},
+{
+    question: "How many legs does a lobster have?",
+    choices: ["10", "8", "12", "None, they are called tentacles/arms."],
+    solution: "10"
+},
+{
+    question: "What color are zebras?",
+    choices: ["White with black stripes", "Black with white stripes", "Depends on the species", "None of the above"],
+    solution: "Black with white stripes"
+},
+{
+    question: "What is the biggest animal that has ever lived?",
+    choices: ["Blue whale", "African elephant", "Apatosaurus (aka brontosaurus)", "Spinosaurus"],
+    solution: "Blue whale"
+},
+{
+    question: "The very first webcam wathched a ________ so researchers at Cambridge could monintor the situation without leaving their desks.",
+    choices: ["Thanksgiving turkey", "Rising tide", "Meter maid", "Coffee pot"],
+    solution: "Coffee pot"
+},
+{
+    question: "What animal lives the longest?",
+    choices: ["Ocean quahog (clam)", "Red sea urchin", "Galapagos tortois", "Rougheye rockfish"],
+    solution: "Ocean quahog (clam)"
+},
+{
+    question: "What are female elephants called?",
+    choices: ["Mares", "Sows", "Cows", "Dams"],
+    solution: "Cows"
+},
+{
+    question: "Which of the following animals sleep standing up?",
+    choices: ["Gorillas", "Flamingos", "Camels", "Ravens"],
+    solution: ""
+},
+{
+    question: "What is the fastest water animal?",
+    choices: ["Porpoise", "Sailfish", "Flying fish", "Tuna"],
+    solution: ""
+},
+{
+    question: "Between 1900 and 1920, _______ was an Olympic event.",
+    choices: ["Egg on Spoon", "Tug of War", "Suck Race", "Three-Legged Race"],
+    solution: "Tug of War"
+},
+{
+    question: "In colonial America, _________ was not a delicacy. It was actually os cheap and plentiful that it was often served to prisoners.",
+    choices: ["Caviar", "Foie gras", "Lobster", "Truffles"],
+    solution: "Lobster"
+},  
+{
+    question: "What are the male honey bees called that are the only members of the colony allowed to mate with the queen?",
+    choices: ["Anthophila", "Drones", "Kings", "Carpenter bee"],
+    solution: "Drones"
+},
+{
+    question: "Which large mammal's tail is so strong it can stand on it and lift its hind legs off the ground?",
+    choices: ["Crocodile", "Chimpanzee", "Kangaroo", "Spider monkey"],
+    solution: "Kangaroo"
+},
+{
+    question: "",
+    choices: ["", "", "", ""],
+    solution: ""
+},
+{
+    question: "",
+    choices: ["", "", "", ""],
+    solution: ""
+},
+{
+    question: "",
+    choices: ["", "", "", ""],
+    solution: ""
+
 }];
 
 var game = {
@@ -66,7 +145,7 @@ var game = {
             }
         }
 
-        $("#miniWrapper").append("</br></br><button id='finish'>I'm So Done!</button>");
+        $("#miniWrapper").append("</br></br><button id='finish'>Finito!</button>");
     },
 
     end: function(){
