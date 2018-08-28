@@ -98,11 +98,6 @@ var questions = [{
     question: "Which large mammal's tail is so strong it can stand on it and lift its hind legs off the ground?",
     choices: ["Crocodile", "Chimpanzee", "Kangaroo", "Spider monkey"],
     solution: "Kangaroo"
-},
-{
-    question: "",
-    choices: ["", "", "", ""],
-    solution: ""
 
 }];
 
@@ -148,7 +143,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-1']:checked"), function(){
             if($(this).val() === questions[1].right){
                 game.right++;
             } else{
@@ -156,7 +151,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-2']:checked"), function(){
             if($(this).val() === questions[2].right){
                 game.right++;
             } else{
@@ -164,7 +159,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-3']:checked"), function(){
             if($(this).val() === questions[3].right){
                 game.right++;
             } else{
@@ -172,7 +167,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-4']:checked"), function(){
             if($(this).val() === questions[4].right){
                 game.right++;
             } else{
@@ -180,7 +175,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-5']:checked"), function(){
             if($(this).val() === questions[5].right){
                 game.right++;
             } else{
@@ -188,7 +183,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-6']:checked"), function(){
             if($(this).val() === questions[6].right){
                 game.right++;
             } else{
@@ -196,7 +191,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-7']:checked"), function(){
             if($(this).val() === questions[7].right){
                 game.right++;
             } else{
@@ -204,7 +199,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-8']:checked"), function(){
             if($(this).val() === questions[8].right){
                 game.right++;
             } else{
@@ -212,7 +207,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-9']:checked"), function(){
             if($(this).val() === questions[9].right){
                 game.right++;
             } else{
@@ -220,7 +215,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-10']:checked"), function(){
             if($(this).val() === questions[10].right){
                 game.right++;
             } else{
@@ -228,7 +223,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-11']:checked"), function(){
             if($(this).val() === questions[11].right){
                 game.right++;
             } else{
@@ -236,7 +231,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-12']:checked"), function(){
             if($(this).val() === questions[12].right){
                 game.right++;
             } else{
@@ -244,7 +239,7 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-13']:checked"), function(){
             if($(this).val() === questions[13].right){
                 game.right++;
             } else{
@@ -252,8 +247,16 @@ var game = {
             }
         });
 
-        $.each($("input[name='question-0']:checked"), function(){
+        $.each($("input[name='question-14']:checked"), function(){
             if($(this).val() === questions[14].right){
+                game.right++;
+            } else{
+                game.wrong++;
+            }
+        });
+
+        $.each($("input[name='question-15']:checked"), function(){
+            if($(this).val() === questions[15].right){
                 game.right++;
             } else{
                 game.wrong++;
