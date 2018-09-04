@@ -5,15 +5,15 @@
 
 $("#start").on('click', function(){
     game.start();
-    // $("#quizBlock").remove();
+    $("#quizBlock").remove();
 
-    // for(var i = 0; i < questions.length; i++){
-    //     $("#quizBlock").append('<h2>'+ questions[i].question+'</h2>');
+    for(var i = 0; i < questions.length; i++){
+        $("#quizBlock").append('<h2>' + questions[i].question + '</h2>');
 
-    //     for(var s = 0; s < questions[i].solution.length; s++){
-    //         $("#quizBlock").append("<input type='radio' name='question-" + i + "'value='" + questions[i].solution[s] + "'>" + questions[i].solution[s]);
-    //     }
-    // }
+        for(var s = 0; s < questions[i].solution.length; s++){
+            $("#quizBlock").append("<input type='radio' name='question-" + i + "'value='" + questions[i].solution[s] + "'>" + questions[i].solution[s]);
+        }
+    }
 });
 
 // $(document).on('click', "#finish", function(){
