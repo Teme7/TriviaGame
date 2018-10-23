@@ -21,7 +21,7 @@ $("#start").on('click', function(){
 //     game.end();
 // });
 
-// var timer;
+var timer;
 
 // var qn = $("#quizBlock");
 
@@ -120,7 +120,7 @@ var game = {
 
         timer = setInterval(game.countdown, 1000);
 
-        $("#miniWrapper").prepend("<h2>Beat the clock... <span id='decrement'>10</span></h2>");
+        $("#miniWrapper").prepend("<h2>Beat the clock... <span id='decrement'>30</span></h2>");
 
         $("#start").remove();
 
